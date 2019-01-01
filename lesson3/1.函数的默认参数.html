@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+	            width:200px;
+	            height:200px;
+	            background:red;
+	            margin:100px auto;
+        	}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="btn" id="btn">
+		<div></div>
+	</body>
+</html>
+<script type="text/javascript"src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		function change(x=500,y=2000){
+			$("div").animate({
+				width : x + "px"
+			},y)
+		}
+		$("#btn").click(function(){
+			change()
+		})
+	})
+	
+	
+	{
+		function test(x,y = 5){
+			console.log("默认值：",x,y)
+		}
+		test(5,10)
+	}
+	
+	{
+		function test(x,y = "world",c = "123"){
+			console.log("默认值:",x,y,c)
+		}
+		test(1)
+	}
+</script>

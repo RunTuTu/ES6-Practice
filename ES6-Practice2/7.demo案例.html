@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background: red;
+				float: left;
+				margin: 50px;
+				font-size: 40px;
+				color: #fff;
+				text-align: center;
+				line-height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>盒子1</div>
+		<div>盒子2</div>
+		<div>盒子3</div>
+	</body>
+</html>
+<script type="text/javascript">
+	let myDiv = document.getElementsByTagName("div");
+	for (let i = 0;i<myDiv.length;i++) {		
+		myDiv[i].onclick = function(){
+			for (let i = 0;i<myDiv.length;i++) {
+				myDiv[i].style.background = "red"
+			}
+			myDiv[i].style.background = "black";
+			
+		}
+	}
+</script>

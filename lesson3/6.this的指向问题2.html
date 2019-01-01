@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+	            width:200px;
+	            height:200px;
+	            background:red;
+	            margin:100px;
+	       }
+		</style>			
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
+<script type="text/javascript"src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(()=>{
+		var myDiv = document.getElementsByTagName("div")[0];
+		var num = 10;
+		myDiv.onclick = function(){
+			setInterval(()=>{
+				num+=10;
+				this.style.width = num + "px"
+			},30)
+		}
+	})
+</script>

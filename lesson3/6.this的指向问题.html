@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+	            width:200px;
+	            height:200px;
+	            background:red;
+	            margin:100px;
+	       }
+		</style>			
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
+<script type="text/javascript"src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(()=>{
+		var myDiv = document.getElementsByTagName("div")[0];
+		myDiv.onclick = function(){
+			function demo(){
+				alert(this)
+			}
+			demo()
+		}
+	})
+</script>
