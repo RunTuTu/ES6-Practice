@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body,input,ul,li,img{margin:0; padding:0;}
+	        .box{
+	            width:300px;
+	            border:1px solid #ccc;
+	            margin:100px auto;
+	        }
+	        .box li{
+	            list-style: none;
+	        }
+	        .box li img{
+	            width:100%;
+	            height:200px;
+	        }
+
+		</style>
+	</head>
+	<body>
+		<input type="button" id="btn" value="getData">
+	</body>
+</html>
+<script type="text/javascript"src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$("#btn").click(function(){
+		$.ajax({
+			url:"https://resources.ninghao.net/wxapp-case/db.json",
+			success:(reponseText)=>{
+				let data = reponseText["slides"];
+				$.each(data, function(index,value) {
+					console.log(value)
+					let $ul = $(`
+						<ul class="box">
+							<li><img src="${value.image}" alt="" /></li>
+							<li>${value["header"]}</li>
+							<li>${value["sub_header"]}</li>
+							<li>${value["description"]}</li>
+						</ul>
+					`)
+					$("body").append($ul)
+				});
+			}
+		});
+	})
+</script>

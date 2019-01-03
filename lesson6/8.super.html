@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	{
+		let obj = {
+			name:"jack"
+		}
+		
+		let timer ={
+			name:"rose",
+			fn(){
+				return super.name;
+			}
+		}
+		
+		Object.setPrototypeOf(timer, obj);
+		
+		console.log(timer.fn())
+	}
+</script>

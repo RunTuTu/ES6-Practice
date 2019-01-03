@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	function User(name,pass){
+		this.name = name;
+		this.pass = pass;
+	}
+	let user = new User ("jack","123456");
+	
+	User.prototype.showName = function () {
+		alert(this.name);
+	}
+	
+	User.prototype.showPass = function(){
+	 	alert(this.pass)
+	}
+	
+	user.showName();
+    user.showPass()
+</script>
